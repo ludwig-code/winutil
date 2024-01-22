@@ -7364,7 +7364,16 @@ $sync.configs.applications = '{
 	"content": "YubiKey Manager",
 	"link": "https://www.yubico.com/support/download/yubikey-manager/",
 	"description": "Official tool to configure FIDO2, OTP and PIV functionality on your YubiKey."
-	}
+},
+"WPFInstalltotalcommander": {
+	"winget": "WhirlwindFX.SignalRgb",
+	"choco": "WhirlwindFX.SignalRgb",
+	"category": "Utilities",
+	"panel": "4",
+	"content": "SignalRgb",
+	"link": "https://signalrgb.com/",
+	"description": "SignalRGB allows you to synchronize your favorite RGB devices using one free application."
+}
 }' | convertfrom-json
 $sync.configs.dns = '{
     "Google":{
