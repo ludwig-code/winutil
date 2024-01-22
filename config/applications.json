@@ -2230,5 +2230,14 @@
 		"content": "Total Commander",
 		"link": "https://www.ghisler.com/",
 		"description": "Total Commander is a file manager for Windows that provides a powerful and intuitive interface for file management."
-		}
+},
+"WPFInstall1password": {
+	"winget": "Yubico.YubikeyManager",
+	"choco": "Yubico.YubikeyManager",
+	"category": "Utilities",
+	"panel": "4",
+	"content": "YubiKey Manager",
+	"link": "https://www.yubico.com/support/download/yubikey-manager/",
+	"description": "Official tool to configure FIDO2, OTP and PIV functionality on your YubiKey."
+	}
 }

@@ -10,7 +10,7 @@
     Author         : Chris Titus @christitustech
     Runspace Author: @DeveloperDurp
     GitHub         : https://github.com/ChrisTitusTech
-    Version        : 24.01.15
+    Version        : 24.01.22
 #>
 param (
     [switch]$Debug,
@@ -47,7 +47,7 @@ Add-Type -AssemblyName System.Windows.Forms
 # Variable to sync between runspaces
 $sync = [Hashtable]::Synchronized(@{})
 $sync.PSScriptRoot = $PSScriptRoot
-$sync.version = "24.01.15"
+$sync.version = "24.01.22"
 $sync.configs = @{}
 $sync.ProcessRunning = $false
 
@@ -7355,7 +7355,16 @@ $sync.configs.applications = '{
 		"content": "Total Commander",
 		"link": "https://www.ghisler.com/",
 		"description": "Total Commander is a file manager for Windows that provides a powerful and intuitive interface for file management."
-		}
+},
+"WPFInstall1password": {
+	"winget": "Yubico.YubikeyManager",
+	"choco": "Yubico.YubikeyManager",
+	"category": "Utilities",
+	"panel": "4",
+	"content": "YubiKey Manager",
+	"link": "https://www.yubico.com/support/download/yubikey-manager/",
+	"description": "Official tool to configure FIDO2, OTP and PIV functionality on your YubiKey."
+	}
 }' | convertfrom-json
 $sync.configs.dns = '{
     "Google":{
@@ -7365,14 +7374,6 @@ $sync.configs.dns = '{
     "Cloudflare":{
         "Primary": "1.1.1.1",
         "Secondary": "1.0.0.1"
-    },
-    "Cloudflare_Malware":{
-        "Primary": "1.1.1.2",
-        "Secondary": "1.0.0.2"
-    },
-    "Cloudflare_Malware_Adult":{
-        "Primary": "1.1.1.3",
-        "Secondary": "1.0.0.3"
     },
     "Level3":{
         "Primary": "4.2.2.2",
