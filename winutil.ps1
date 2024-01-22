@@ -7373,6 +7373,17 @@ $sync.configs.applications = '{
 	"content": "SignalRgb",
 	"link": "https://signalrgb.com/",
 	"description": "SignalRGB allows you to synchronize your favorite RGB devices using one free application."
+},
+"WPFInstalltotalcommander": {
+	"winget": "vividos.winLAME",
+	"choco": "vividos.winLAME",
+	"category": "Microsoft Tools",
+	"panel": "3",
+	"content": "vividos winLAME",
+	"link": "https://github.com/vividos/winLAME",
+	"description": "inLAME is an easy to use encoder for many audio formats, including MP3, Opus, Ogg Vorbis and more. winLAME uses the LAME mp3 encoder.
+
+	winLAME lets you read in audio tracks from CDs or encode audio files from your hard drive. The intuitive wizard-style user interface makes it easy to set up encoding settings. Multicore CPUs are used to parallelize encoding tasks."
 }
 }' | convertfrom-json
 $sync.configs.dns = '{
