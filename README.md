@@ -12,11 +12,11 @@ The recommended way is to right-click on the start menu and select (PowerShell A
 Launch Command:
 
 ```
-iwr -useb https://christitus.com/win | iex
+iwr -useb https://raw.githubusercontent.com/ludwig-code/winutil/main/winutil.ps1| iex
 ```
 or by executing: 
 ```
-irm https://christitus.com/win | iex
+irm https://raw.githubusercontent.com/ludwig-code/winutil/main/winutil.ps1| iex
 ```
 Courtesy of the issue raised at: [#144](/../../issues/144)
 
