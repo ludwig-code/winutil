@@ -7377,7 +7377,7 @@ $sync.configs.applications = '{
 "WPFInstalltotalcommander": {
 	"winget": "vividos.winLAME",
 	"choco": "vividos.winLAME",
-	"category": "Microsoft Tools",
+	"category": "Multimedia Tools",
 	"panel": "3",
 	"content": "vividos winLAME",
 	"link": "https://github.com/vividos/winLAME",
