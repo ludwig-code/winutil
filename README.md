@@ -18,7 +18,7 @@ or by executing:
 ```
 irm https://raw.githubusercontent.com/ludwig-code/winutil/main/winutil.ps1| iex
 ```
-or downlowd exe YOU NEED TO RUN AS ADMINISTRATOR
+or downlowd exe YOU NEED TO RUN AS ADMINISTRATOR. The exe is a little bit buggy
 ```
 https://github.com/ludwig-code/winutil/raw/main/winutil.exe
 ```
