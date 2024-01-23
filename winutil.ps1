@@ -76,7 +76,7 @@ function ConvertTo-Icon {
         This function will convert PNG to ICO file
 
         .EXAMPLE
-        ConvertTo-Icon -bitmapPath "$env:TEMP\cttlogo.png" -iconPath $iconPath
+        ConvertTo-Icon -bitmapPath "$env:TEMP\winutil.png" -iconPath $iconPath
     #>
     param( [Parameter(Mandatory=$true)] 
         $bitmapPath, 
@@ -1204,9 +1204,9 @@ function New-FirstRun {
 	# Create a shortcut object
 	$shortcut = $shell.CreateShortcut($shortcutPath)
 
-	if (Test-Path -Path "c:\Windows\cttlogo.png")
+	if (Test-Path -Path "c:\Windows\winutil.png")
 	{
-		$shortcut.IconLocation = "c:\Windows\cttlogo.png"
+		$shortcut.IconLocation = "c:\Windows\winutil.png"
 	}
 	
 	# Set properties of the shortcut
@@ -2496,25 +2496,8 @@ Function Invoke-WPFFormVariables {
     #If ($global:ReadmeDisplay -ne $true) { Write-Host "If you need to reference this display again, run Get-FormVariables" -ForegroundColor Yellow; $global:ReadmeDisplay = $true }
 
 
-    Write-Host ""
-    Write-Host "    CCCCCCCCCCCCCTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT   "
-    Write-Host " CCC::::::::::::CT:::::::::::::::::::::TT:::::::::::::::::::::T   "
-    Write-Host "CC:::::::::::::::CT:::::::::::::::::::::TT:::::::::::::::::::::T  "
-    Write-Host "C:::::CCCCCCCC::::CT:::::TT:::::::TT:::::TT:::::TT:::::::TT:::::T "
-    Write-Host "C:::::C       CCCCCCTTTTTT  T:::::T  TTTTTTTTTTTT  T:::::T  TTTTTT"
-    Write-Host "C:::::C                     T:::::T                T:::::T        "
-    Write-Host "C:::::C                     T:::::T                T:::::T        "
-    Write-Host "C:::::C                     T:::::T                T:::::T        "
-    Write-Host "C:::::C                     T:::::T                T:::::T        "
-    Write-Host "C:::::C                     T:::::T                T:::::T        "
-    Write-Host "C:::::C                     T:::::T                T:::::T        "
-    Write-Host "C:::::C       CCCCCC        T:::::T                T:::::T        "
-    Write-Host "C:::::CCCCCCCC::::C      TT:::::::TT            TT:::::::TT       "
-    Write-Host "CC:::::::::::::::C       T:::::::::T            T:::::::::T       "
-    Write-Host "CCC::::::::::::C         T:::::::::T            T:::::::::T       "
-    Write-Host "  CCCCCCCCCCCCC          TTTTTTTTTTT            TTTTTTTTTTT       "
-    Write-Host ""
-    Write-Host "====Chris Titus Tech====="
+    
+     
     Write-Host "=====Windows Toolbox====="
 
     #====DEBUG GUI Elements====
@@ -3032,15 +3015,15 @@ public class PowerManagement {
 		$shell = New-Object -ComObject WScript.Shell
 		$shortcut = $shell.CreateShortcut($shortcutPath)
 
-		if (Test-Path -Path "$env:TEMP\cttlogo.png")
+		if (Test-Path -Path "$env:TEMP\winutil.png")
 		{
-			$pngPath = "$env:TEMP\cttlogo.png"
-			$icoPath = "$env:TEMP\cttlogo.ico"
+			$pngPath = "$env:TEMP\winutil.png"
+			$icoPath = "$env:TEMP\winutil.ico"
 			ConvertTo-Icon -bitmapPath $pngPath -iconPath $icoPath
 			Write-Host "ICO file created at: $icoPath"
-			Copy-Item "$env:TEMP\cttlogo.png" "$($scratchDir)\Windows\cttlogo.png" -force
-			Copy-Item "$env:TEMP\cttlogo.ico" "$($scratchDir)\Windows\cttlogo.ico" -force
-			$shortcut.IconLocation = "c:\Windows\cttlogo.ico"
+			Copy-Item "$env:TEMP\winutil.png" "$($scratchDir)\Windows\winutil.png" -force
+			Copy-Item "$env:TEMP\winutil.ico" "$($scratchDir)\Windows\winutil.ico" -force
+			$shortcut.IconLocation = "c:\Windows\winutil.ico"
 		}
 
 		$shortcut.TargetPath = "powershell.exe"
@@ -3431,9 +3414,9 @@ function Invoke-WPFShortcut {
                 $ArgumentsToSourceExe = "$powershell '$IRM'"
                 $DestinationName = "WinUtil.lnk"
 
-                if (Test-Path -Path "$env:TEMP\cttlogo.png") {
-                    $iconPath = "$env:SystempRoot\cttlogo.ico"
-                    ConvertTo-Icon -bitmapPath "$env:TEMP\cttlogo.png" -iconPath $iconPath
+                if (Test-Path -Path "$env:TEMP\winutil.png") {
+                    $iconPath = "$env:SystempRoot\winutil.ico"
+                    ConvertTo-Icon -bitmapPath "$env:TEMP\winutil.png" -iconPath $iconPath
                 }
             }
         }
@@ -4606,7 +4589,7 @@ $inputXML = '<Window x:Class="WinUtility.MainWindow"
         </Grid.ColumnDefinitions>
         <DockPanel HorizontalAlignment="Stretch" Background="{MainBackgroundColor}" SnapsToDevicePixels="True" Grid.Row="0" Width="Auto">
             <Image Height="{ToggleButtonHeight}" Width="{ToggleButtonHeight}" Name="WPFIcon" 
-                SnapsToDevicePixels="True" Source="https://christitus.com/images/logo-full.png" Margin="10"/>
+                SnapsToDevicePixels="True" Source="https://raw.githubusercontent.com/ludwig-code/winutil/main/winutil.png" Margin="10"/>
             <ToggleButton HorizontalAlignment="Left" Height="{ToggleButtonHeight}" Width="100"
                 Background="{ButtonInstallBackgroundColor}" Foreground="white" FontWeight="Bold" Name="WPFTab1BT">
                 <ToggleButton.Content>
@@ -7356,7 +7339,7 @@ $sync.configs.applications = '{
 		"link": "https://www.ghisler.com/",
 		"description": "Total Commander is a file manager for Windows that provides a powerful and intuitive interface for file management."
 },
-"WPFInstall1password": {
+"WPFInstallYubikeyManager": {
 	"winget": "Yubico.YubikeyManager",
 	"choco": "Yubico.YubikeyManager",
 	"category": "Utilities",
@@ -7365,7 +7348,7 @@ $sync.configs.applications = '{
 	"link": "https://www.yubico.com/support/download/yubikey-manager/",
 	"description": "Official tool to configure FIDO2, OTP and PIV functionality on your YubiKey."
 },
-"WPFInstalltotalcommander": {
+"WPFInstallSignalRgb": {
 	"winget": "WhirlwindFX.SignalRgb",
 	"choco": "WhirlwindFX.SignalRgb",
 	"category": "Utilities",
@@ -7374,16 +7357,14 @@ $sync.configs.applications = '{
 	"link": "https://signalrgb.com/",
 	"description": "SignalRGB allows you to synchronize your favorite RGB devices using one free application."
 },
-"WPFInstalltotalcommander": {
+"WPFInstallwinLAME": {
 	"winget": "vividos.winLAME",
 	"choco": "vividos.winLAME",
 	"category": "Multimedia Tools",
 	"panel": "3",
 	"content": "vividos winLAME",
 	"link": "https://github.com/vividos/winLAME",
-	"description": "inLAME is an easy to use encoder for many audio formats, including MP3, Opus, Ogg Vorbis and more. winLAME uses the LAME mp3 encoder.
-
-	winLAME lets you read in audio tracks from CDs or encode audio files from your hard drive. The intuitive wizard-style user interface makes it easy to set up encoding settings. Multicore CPUs are used to parallelize encoding tasks."
+	"description": "inLAME is an easy to use encoder for many audio formats, including MP3, Opus, Ogg Vorbis and more. winLAME uses the LAME mp3 encoder."
 }
 }' | convertfrom-json
 $sync.configs.dns = '{
@@ -10395,9 +10376,9 @@ Add-Type @"
 
     # need to experiemnt more
     # setting icon for the windows is still not working
-    # $pngUrl = "https://christitus.com/images/logo-full.png"
-    # $pngPath = "$env:TEMP\cttlogo.png"
-    # $iconPath = "$env:TEMP\cttlogo.ico"
+    # $pngUrl = "https://raw.githubusercontent.com/ludwig-code/winutil/main/winutil.png"
+    # $pngPath = "$env:TEMP/winutil.png"
+    # $iconPath = "$env:TEMP\winutil.ico"
     # # Download the PNG file
     # Invoke-WebRequest -Uri $pngUrl -OutFile $pngPath
     # if (Test-Path -Path $pngPath) {
@@ -10556,14 +10537,11 @@ $sync["AboutMenuItem"].Add_Click({
     $sync["SettingsPopup"].IsOpen = $false
     # Example usage
     $authorInfo = @"
-Author   : @christitustech
-Runspace : @DeveloperDurp
-GUI      : @KonTy
-MicroWin : @KonTy
-GitHub   : https://github.com/ChrisTitusTech/winutil
-Version  : $($sync.version)
+Author   : @christitustech @Ludwig-code
+github.com/ludwig-code/winutil offical GitHub form chris titus: https://github.com/ChrisTitusTech/winutil
+Version  : $($sync.version) Fork of christitustech winutil
 "@    
-    Show-CustomDialog -Message $authorInfo -Width 400
+    Show-CustomDialog -Message $authorInfo -Width 600
 })
 
 $sync["Form"].ShowDialog() | out-null

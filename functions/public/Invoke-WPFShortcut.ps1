@@ -20,9 +20,9 @@ function Invoke-WPFShortcut {
                 $ArgumentsToSourceExe = "$powershell '$IRM'"
                 $DestinationName = "WinUtil.lnk"
 
-                if (Test-Path -Path "$env:TEMP\cttlogo.png") {
-                    $iconPath = "$env:SystempRoot\cttlogo.ico"
-                    ConvertTo-Icon -bitmapPath "$env:TEMP\cttlogo.png" -iconPath $iconPath
+                if (Test-Path -Path "$env:TEMP\winutil.png") {
+                    $iconPath = "$env:SystempRoot\winutil.ico"
+                    ConvertTo-Icon -bitmapPath "$env:TEMP\winutil.png" -iconPath $iconPath
                 }
             }
         }

@@ -2231,7 +2231,7 @@
 		"link": "https://www.ghisler.com/",
 		"description": "Total Commander is a file manager for Windows that provides a powerful and intuitive interface for file management."
 },
-"WPFInstall1password": {
+"WPFInstallYubikeyManager": {
 	"winget": "Yubico.YubikeyManager",
 	"choco": "Yubico.YubikeyManager",
 	"category": "Utilities",
@@ -2240,7 +2240,7 @@
 	"link": "https://www.yubico.com/support/download/yubikey-manager/",
 	"description": "Official tool to configure FIDO2, OTP and PIV functionality on your YubiKey."
 },
-"WPFInstalltotalcommander": {
+"WPFInstallSignalRgb": {
 	"winget": "WhirlwindFX.SignalRgb",
 	"choco": "WhirlwindFX.SignalRgb",
 	"category": "Utilities",
@@ -2249,15 +2249,13 @@
 	"link": "https://signalrgb.com/",
 	"description": "SignalRGB allows you to synchronize your favorite RGB devices using one free application."
 },
-"WPFInstalltotalcommander": {
+"WPFInstallwinLAME": {
 	"winget": "vividos.winLAME",
 	"choco": "vividos.winLAME",
 	"category": "Multimedia Tools",
 	"panel": "3",
 	"content": "vividos winLAME",
 	"link": "https://github.com/vividos/winLAME",
-	"description": "inLAME is an easy to use encoder for many audio formats, including MP3, Opus, Ogg Vorbis and more. winLAME uses the LAME mp3 encoder.
-
-	winLAME lets you read in audio tracks from CDs or encode audio files from your hard drive. The intuitive wizard-style user interface makes it easy to set up encoding settings. Multicore CPUs are used to parallelize encoding tasks."
+	"description": "inLAME is an easy to use encoder for many audio formats, including MP3, Opus, Ogg Vorbis and more. winLAME uses the LAME mp3 encoder."
 }
 }

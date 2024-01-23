@@ -5,7 +5,7 @@ function ConvertTo-Icon {
         This function will convert PNG to ICO file
 
         .EXAMPLE
-        ConvertTo-Icon -bitmapPath "$env:TEMP\cttlogo.png" -iconPath $iconPath
+        ConvertTo-Icon -bitmapPath "$env:TEMP\winutil.png" -iconPath $iconPath
     #>
     param( [Parameter(Mandatory=$true)] 
         $bitmapPath, 

@@ -326,9 +326,9 @@ Add-Type @"
 
     # need to experiemnt more
     # setting icon for the windows is still not working
-    # $pngUrl = "https://christitus.com/images/logo-full.png"
-    # $pngPath = "$env:TEMP\cttlogo.png"
-    # $iconPath = "$env:TEMP\cttlogo.ico"
+    # $pngUrl = "https://raw.githubusercontent.com/ludwig-code/winutil/main/winutil.png"
+    # $pngPath = "$env:TEMP/winutil.png"
+    # $iconPath = "$env:TEMP\winutil.ico"
     # # Download the PNG file
     # Invoke-WebRequest -Uri $pngUrl -OutFile $pngPath
     # if (Test-Path -Path $pngPath) {
@@ -487,14 +487,11 @@ $sync["AboutMenuItem"].Add_Click({
     $sync["SettingsPopup"].IsOpen = $false
     # Example usage
     $authorInfo = @"
-Author   : @christitustech
-Runspace : @DeveloperDurp
-GUI      : @KonTy
-MicroWin : @KonTy
-GitHub   : https://github.com/ChrisTitusTech/winutil
-Version  : $($sync.version)
+Author   : @christitustech @Ludwig-code
+github.com/ludwig-code/winutil offical GitHub form chris titus: https://github.com/ChrisTitusTech/winutil
+Version  : $($sync.version) Fork of christitustech winutil
 "@    
-    Show-CustomDialog -Message $authorInfo -Width 400
+    Show-CustomDialog -Message $authorInfo -Width 600
 })
 
 $sync["Form"].ShowDialog() | out-null

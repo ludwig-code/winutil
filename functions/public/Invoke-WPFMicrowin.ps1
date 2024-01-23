@@ -167,15 +167,15 @@ public class PowerManagement {
 		$shell = New-Object -ComObject WScript.Shell
 		$shortcut = $shell.CreateShortcut($shortcutPath)
 
-		if (Test-Path -Path "$env:TEMP\cttlogo.png")
+		if (Test-Path -Path "$env:TEMP\winutil.png")
 		{
-			$pngPath = "$env:TEMP\cttlogo.png"
-			$icoPath = "$env:TEMP\cttlogo.ico"
+			$pngPath = "$env:TEMP\winutil.png"
+			$icoPath = "$env:TEMP\winutil.ico"
 			ConvertTo-Icon -bitmapPath $pngPath -iconPath $icoPath
 			Write-Host "ICO file created at: $icoPath"
-			Copy-Item "$env:TEMP\cttlogo.png" "$($scratchDir)\Windows\cttlogo.png" -force
-			Copy-Item "$env:TEMP\cttlogo.ico" "$($scratchDir)\Windows\cttlogo.ico" -force
-			$shortcut.IconLocation = "c:\Windows\cttlogo.ico"
+			Copy-Item "$env:TEMP\winutil.png" "$($scratchDir)\Windows\winutil.png" -force
+			Copy-Item "$env:TEMP\winutil.ico" "$($scratchDir)\Windows\winutil.ico" -force
+			$shortcut.IconLocation = "c:\Windows\winutil.ico"
 		}
 
 		$shortcut.TargetPath = "powershell.exe"
