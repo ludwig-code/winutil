@@ -116,17 +116,7 @@
 		"link": "https://www.waterfox.net/",
 		"description": "Waterfox is a fast, privacy-focused web browser based on Firefox, designed to preserve user choice and privacy."
 	},
-
-"WPFInstallwaterfox": {
-	"winget": "Opera.OperaGX",
-	"choco": "Opera GX",
-	"category": "Browsers",
-	"panel": "0",
-	"content": "Opera GX",
-	"link": "https://www.opera.com/gx",
-	"description": "Get an unparalleled gaming and browsing experience on mobile and desktop. Set limits on CPU, RAM, and Network usage, use Discord & Twitch from the sidebar, and connect mobile and desktop browsers with the file-sharing Flow feature."
-},
-
+	
 	"WPFInstallchatterino": {
 		"winget": "ChatterinoTeam.Chatterino",
 		"choco": "chatterino",
