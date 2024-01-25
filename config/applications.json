@@ -116,7 +116,16 @@
 		"link": "https://www.waterfox.net/",
 		"description": "Waterfox is a fast, privacy-focused web browser based on Firefox, designed to preserve user choice and privacy."
 	},
-	
+	},
+	"WPFInstallCentBrowser": {
+	"winget": "CentStudio.CentBrowser",
+	"choco": "CentBrowser",
+	"category": "Browsers",
+	"panel": "0",
+	"content": "CentBrowser",
+	"link": "https://www.centbrowser.com/",
+	"description": "The Most Feature Rich Chromium."
+	},
 	"WPFInstallchatterino": {
 		"winget": "ChatterinoTeam.Chatterino",
 		"choco": "chatterino",
