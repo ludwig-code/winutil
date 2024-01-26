@@ -20,9 +20,9 @@ if ($Config) {
     $PARAM_CONFIG = $Config
 }
 
-$PARAM_RUN = $false
-# Handle the -Run switch
-if ($Run) {
+    $PARAM_RUN = $false
+    # Handle the -Run switch
+i  f ($Run) {
     Write-Host "Running config file tasks..."
     $PARAM_RUN = $true
 }

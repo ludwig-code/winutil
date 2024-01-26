@@ -10,7 +10,11 @@
     Author         : Chris Titus @christitustech
     Runspace Author: @DeveloperDurp
     GitHub         : https://github.com/ChrisTitusTech
+<<<<<<< Updated upstream
     Version        : 24.01.25
+=======
+    Version        : 24.01.26
+>>>>>>> Stashed changes
 #>
 param (
     [switch]$Debug,
@@ -27,9 +31,9 @@ if ($Config) {
     $PARAM_CONFIG = $Config
 }
 
-$PARAM_RUN = $false
-# Handle the -Run switch
-if ($Run) {
+    $PARAM_RUN = $false
+    # Handle the -Run switch
+i  f ($Run) {
     Write-Host "Running config file tasks..."
     $PARAM_RUN = $true
 }
@@ -47,7 +51,11 @@ Add-Type -AssemblyName System.Windows.Forms
 # Variable to sync between runspaces
 $sync = [Hashtable]::Synchronized(@{})
 $sync.PSScriptRoot = $PSScriptRoot
+<<<<<<< Updated upstream
 $sync.version = "24.01.25"
+=======
+$sync.version = "24.01.26"
+>>>>>>> Stashed changes
 $sync.configs = @{}
 $sync.ProcessRunning = $false
 
@@ -5290,6 +5298,19 @@ $sync.configs.applications = '{
 		"link": "https://www.waterfox.net/",
 		"description": "Waterfox is a fast, privacy-focused web browser based on Firefox, designed to preserve user choice and privacy."
 	},
+<<<<<<< Updated upstream
+=======
+	
+	"WPFInstallCentBrowser": {
+	"winget": "CentStudio.CentBrowser",
+	"choco": "CentBrowser",
+	"category": "Browsers",
+	"panel": "0",
+	"content": "CentBrowser",
+	"link": "https://www.centbrowser.com/",
+	"description": "The Most Feature Rich Chromium."
+	},
+>>>>>>> Stashed changes
 	"WPFInstallchatterino": {
 		"winget": "ChatterinoTeam.Chatterino",
 		"choco": "chatterino",
@@ -7530,7 +7551,68 @@ $sync.configs.applications = '{
 		"content": "Total Commander",
 		"link": "https://www.ghisler.com/",
 		"description": "Total Commander is a file manager for Windows that provides a powerful and intuitive interface for file management."
+<<<<<<< Updated upstream
 		}
+=======
+},
+	"WPFInstallYubikeyManager": {
+	"winget": "Yubico.YubikeyManager",
+	"choco": "Yubico.YubikeyManager",
+	"category": "Utilities",
+	"panel": "4",
+	"content": "YubiKey Manager",
+	"link": "https://www.yubico.com/support/download/yubikey-manager/",
+	"description": "Official tool to configure FIDO2, OTP and PIV functionality on your YubiKey."
+},
+	"WPFInstallSignalRgb": {
+	"winget": "WhirlwindFX.SignalRgb",
+	"choco": "WhirlwindFX.SignalRgb",
+	"category": "Utilities",
+	"panel": "4",
+	"content": "SignalRgb",
+	"link": "https://signalrgb.com/",
+	"description": "SignalRGB allows you to synchronize your favorite RGB devices using one free application."
+},
+	"WPFInstallwinLAME": {
+	"winget": "vividos.winLAME",
+	"choco": "vividos.winLAME",
+	"category": "Multimedia Tools",
+	"panel": "3",
+	"content": "vividos winLAME",
+	"link": "https://github.com/vividos/winLAME",
+	"description": "inLAME is an easy to use encoder for many audio formats, including MP3, Opus, Ogg Vorbis and more. winLAME uses the LAME mp3 encoder."
+},
+	"WPFInstallvncturbo": {
+	"winget": "VirtualGL.TurboVNC",
+	"choco": "VirtualGL.TurboVNC",
+	"category": "Pro Tools",
+	"panel": "3",
+	"content": "TurboVNC",
+	"link": "https://www.turbovnc.org/",
+	"description": "TurboVNC is a high-performance, enterprise-quality version of VNC based on TightVNC."
+},
+"WPFInstallAuthy": {
+	"winget": "Twilio.Authy",
+	"choco": "Twilio.Authy",
+	"category": "Pro Tools",
+	"panel": "3",
+	"content": "Twilio Authy",
+	"link": "https://authy.com/",
+	"description": "Easy to setup 2FA for any account."
+	
+},
+"WPFInstallSpotify" : {
+	"winget": "Spotify.Spotify",
+	"choco": "spotify",
+	"category": "Multimedia tools",
+	"panel": "3",
+	"content": "Spotify",
+	"link": "https://spotify.com/",
+	"description": "Easy to setup 2FA for any account."
+	
+}
+
+>>>>>>> Stashed changes
 }' | convertfrom-json
 $sync.configs.dns = '{
     "Google":{
