@@ -3810,5 +3810,33 @@
       Write-Host Please sign out and back in, or restart your computer to apply the changes!
       "
     ]
+  },
+  "WPFTweaksUninstallMcAfee": {
+    "Content": "Uninstall McAfee",
+    "Description": "Uninstalls McAfee antivirus software using winget",
+    "category": "Essential Tweaks",
+    "panel": "1",
+    "Order": "a010_",
+    "InvokeScript": [
+      "winget uninstall -e --id McAfee.McAfeeSecurity --accept-source-agreements --accept-package-agreements --silent"
+    ],
+    "UndoScript": [
+      "winget install -e --id McAfee.McAfeeSecurity --accept-source-agreements --accept-package-agreements --silent"
+    ],
+    "link": ""
+  },
+  "WPFTweaksUninstallNorton": {
+    "Content": "Uninstall Norton",
+    "Description": "Uninstalls Norton antivirus software using winget",
+    "category": "Essential Tweaks",
+    "panel": "1",
+    "Order": "a011_",
+    "InvokeScript": [
+      "winget uninstall -e --id NortonLifeLock.NortonSecurity --accept-source-agreements --accept-package-agreements --silent"
+    ],
+    "UndoScript": [
+      "winget install -e --id NortonLifeLock.NortonSecurity --accept-source-agreements --accept-package-agreements --silent"
+    ],
+    "link": ""
   }
 }
